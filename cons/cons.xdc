@@ -1,16 +1,16 @@
- 
+
 ## This file is a general .xdc for the Cmod S7-25 Rev. B
 ## To use it in a project:
 ## - uncomment the lines corresponding to used pins
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
 ## 12 MHz System Clock
-#set_property -dict { PACKAGE_PIN M9    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_14 Sch=gclk
-#create_clock -add -name sys_clk_pin -period 83.33 -waveform {0 41.66} [get_ports { clk }];
+set_property -dict {PACKAGE_PIN M9 IOSTANDARD LVCMOS33} [get_ports clock]
+create_clock -period 83.330 -name sys_clk_pin -waveform {0.000 41.660} -add [get_ports clock]
 
 ## Push Buttons
-#set_property -dict { PACKAGE_PIN D2    IOSTANDARD LVCMOS33 } [get_ports { btn[0] }]; #IO_L6P_T0_34 Sch=btn[0]
-#set_property -dict { PACKAGE_PIN D1    IOSTANDARD LVCMOS33 } [get_ports { btn[1] }]; #IO_L6N_T0_VREF_34 Sch=btn[1]
+#set_property -dict { PACKAGE_PIN D2    IOSTANDARD LVCMOS33 } [get_ports { resetn }]; #IO_L6P_T0_34 Sch=btn[0]
+#set_property -dict {PACKAGE_PIN D1 IOSTANDARD LVCMOS33} [get_ports resetn]
 
 ## RGB LEDs
 #set_property -dict { PACKAGE_PIN F1    IOSTANDARD LVCMOS33 } [get_ports { led0_b }]; #IO_L10N_T1_34 Sch=led0_b
@@ -18,20 +18,20 @@
 #set_property -dict { PACKAGE_PIN F2    IOSTANDARD LVCMOS33 } [get_ports { led0_r }]; #IO_L10P_T1_34 Sch=led0_r
 
 ## 4 LEDs
-#set_property -dict { PACKAGE_PIN E2    IOSTANDARD LVCMOS33 } [get_ports { led[0] }]; #IO_L8P_T1_34 Sch=led[1]
-#set_property -dict { PACKAGE_PIN K1    IOSTANDARD LVCMOS33 } [get_ports { led[1] }]; #IO_L16P_T2_34 Sch=led[2]
-#set_property -dict { PACKAGE_PIN J1    IOSTANDARD LVCMOS33 } [get_ports { led[2] }]; #IO_L16N_T2_34 Sch=led[3]
-#set_property -dict { PACKAGE_PIN E1    IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; #IO_L8N_T1_34 Sch=led[4]
+set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS33} [get_ports {LED[0]}]
+set_property -dict {PACKAGE_PIN K1 IOSTANDARD LVCMOS33} [get_ports {LED[1]}]
+set_property -dict {PACKAGE_PIN J1 IOSTANDARD LVCMOS33} [get_ports {LED[2]}]
+set_property -dict {PACKAGE_PIN E1 IOSTANDARD LVCMOS33} [get_ports {LED[3]}]
 
 ## Pmod Header JA
-#set_property -dict { PACKAGE_PIN J2    IOSTANDARD LVCMOS33 } [get_ports { ja[0] }]; #IO_L14P_T2_SRCC_34 Sch=ja[1]
-#set_property -dict { PACKAGE_PIN H2    IOSTANDARD LVCMOS33 } [get_ports { ja[1] }]; #IO_L14N_T2_SRCC_34 Sch=ja[2]
-#set_property -dict { PACKAGE_PIN H4    IOSTANDARD LVCMOS33 } [get_ports { ja[2] }]; #IO_L13P_T2_MRCC_34 Sch=ja[3]
-#set_property -dict { PACKAGE_PIN F3    IOSTANDARD LVCMOS33 } [get_ports { ja[3] }]; #IO_L11N_T1_SRCC_34 Sch=ja[4]
-#set_property -dict { PACKAGE_PIN H3    IOSTANDARD LVCMOS33 } [get_ports { ja[4] }]; #IO_L13N_T2_MRCC_34 Sch=ja[7]
-#set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { ja[5] }]; #IO_L12P_T1_MRCC_34 Sch=ja[8]
-#set_property -dict { PACKAGE_PIN G1    IOSTANDARD LVCMOS33 } [get_ports { ja[6] }]; #IO_L12N_T1_MRCC_34 Sch=ja[9]
-#set_property -dict { PACKAGE_PIN F4    IOSTANDARD LVCMOS33 } [get_ports { ja[7] }]; #IO_L11P_T1_SRCC_34 Sch=ja[10]
+set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS33} [get_ports mclk1]
+set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS33} [get_ports ws1]
+set_property -dict {PACKAGE_PIN H4 IOSTANDARD LVCMOS33} [get_ports sclk1]
+set_property -dict {PACKAGE_PIN F3 IOSTANDARD LVCMOS33} [get_ports sd_tx]
+set_property -dict {PACKAGE_PIN H3 IOSTANDARD LVCMOS33} [get_ports mclk0]
+set_property -dict {PACKAGE_PIN H1 IOSTANDARD LVCMOS33} [get_ports ws0]
+set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS33} [get_ports sclk0]
+set_property -dict {PACKAGE_PIN F4 IOSTANDARD LVCMOS33} [get_ports sd_rx]
 
 ## USB UART
 ## Note: Port names are from the perspoctive of the FPGA.
@@ -68,9 +68,9 @@
 #set_property -dict { PACKAGE_PIN L13   IOSTANDARD LVCMOS33 } [get_ports { pio29 }]; #IO_L7P_T1_D09_14 Sch=pio[29]
 #set_property -dict { PACKAGE_PIN M13   IOSTANDARD LVCMOS33 } [get_ports { pio30 }]; #IO_L8P_T1_D11_14 Sch=pio[30]
 #set_property -dict { PACKAGE_PIN J11   IOSTANDARD LVCMOS33 } [get_ports { pio31 }]; #IO_0_14 Sch=pio[31]
-#set_property -dict { PACKAGE_PIN C5    IOSTANDARD LVCMOS33 } [get_ports { pio40 }]; #IO_L5P_T0_34 Sch=pio[40]
-#set_property -dict { PACKAGE_PIN A2    IOSTANDARD LVCMOS33 } [get_ports { pio41 }]; #IO_L2N_T0_34 Sch=pio[41]
-#set_property -dict { PACKAGE_PIN B2    IOSTANDARD LVCMOS33 } [get_ports { pio42 }]; #IO_L2P_T0_34 Sch=pio[42]
+set_property -dict {PACKAGE_PIN C5 IOSTANDARD LVCMOS33} [get_ports sw]
+set_property -dict {PACKAGE_PIN A2 IOSTANDARD LVCMOS33} [get_ports A]
+set_property -dict {PACKAGE_PIN B2 IOSTANDARD LVCMOS33} [get_ports B]
 #set_property -dict { PACKAGE_PIN B1    IOSTANDARD LVCMOS33 } [get_ports { pio43 }]; #IO_L4N_T0_34 Sch=pio[43]
 #set_property -dict { PACKAGE_PIN C1    IOSTANDARD LVCMOS33 } [get_ports { pio44 }]; #IO_L4P_T0_34 Sch=pio[44]
 #set_property -dict { PACKAGE_PIN B3    IOSTANDARD LVCMOS33 } [get_ports { pio45 }]; #IO_L3N_T0_DQS_34 Sch=pio[45]
@@ -86,6 +86,47 @@
 #set_property -dict { PACKAGE_PIN J12   IOSTANDARD LVCMOS33 } [get_ports { qspi_dq[2] }]; #IO_L2P_T0_D02_14 Sch=qspi_dq[2]
 #set_property -dict { PACKAGE_PIN K13   IOSTANDARD LVCMOS33 } [get_ports { qspi_dq[3] }]; #IO_L2N_T0_D03_14 Sch=qspi_dq[3]
 
+## Voltage Configuration
+set_property CFGBVS VCCO [current_design]
+set_property CONFIG_VOLTAGE 3.3 [current_design]
+
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
 set_property CONFIG_MODE SPIx4 [current_design]
+
+
+
+
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER true [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 3 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list theBlockDesign_i/i2s_transceiver_0/mclk]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 23 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[0]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[1]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[2]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[3]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[4]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[5]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[6]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[7]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[8]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[9]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[10]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[11]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[12]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[13]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[14]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[15]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[16]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[17]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[18]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[19]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[20]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[21]} {theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[22]}]]
+create_debug_core u_ila_1 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER true [get_debug_cores u_ila_1]
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 3 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property port_width 1 [get_debug_ports u_ila_1/clk]
+connect_debug_port u_ila_1/clk [get_nets [list theBlockDesign_i/i2s_transceiver_0/U0/mclk]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+set_property port_width 32 [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[0]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[1]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[2]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[3]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[4]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[5]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[6]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[7]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[8]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[9]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[10]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[11]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[12]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[13]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[14]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[15]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[16]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[17]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[18]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[19]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[20]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[21]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[22]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[23]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[24]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[25]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[26]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[27]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[28]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[29]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[30]} {theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[31]}]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clock_IBUF]

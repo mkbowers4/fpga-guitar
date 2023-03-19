@@ -16,7 +16,9 @@ ENTITY i2s_transceiver IS
     l_data_tx  :  IN   STD_LOGIC_VECTOR(datawidth-1 DOWNTO 0);  --left channel data to transmit
     r_data_tx  :  IN   STD_LOGIC_VECTOR(datawidth-1 DOWNTO 0);  --right channel data to transmit
     l_data_rx  :  OUT  STD_LOGIC_VECTOR(datawidth-1 DOWNTO 0);  --left channel data received
-    r_data_rx  :  OUT  STD_LOGIC_VECTOR(datawidth-1 DOWNTO 0)); --right channel data received
+    r_data_rx  :  OUT  STD_LOGIC_VECTOR(datawidth-1 DOWNTO 0); --right channel data received
+    
+    lr_indicator: OUT  STD_LOGIC_VECTOR(1 downto 0));
 END i2s_transceiver;
 
 ARCHITECTURE bhv OF i2s_transceiver IS
@@ -83,6 +85,9 @@ BEGIN
       
     ELSIF(mclk'EVENT AND mclk = '1') THEN                                    --master clock rising edge
       IF(sclk_cnt < mclk_sclk_ratio/2-1) THEN                                --less than half period of sclk 
+      
+        LR_indicator <= "00";
+        
     --if(sclk_cnt < 4/2-1)
         sclk_cnt := sclk_cnt + 1;                                            --increment mclk/sclk counter
         
@@ -93,6 +98,8 @@ BEGIN
         IF(ws_cnt < sclk_ws_ratio-1) THEN  
       --if(ws_cnt < 64-1)                                                 --less than half period of ws
           ws_cnt := ws_cnt + 1;                                              --increment sclk/ws counter
+          
+          LR_indicator <= "00";
           
         --rising edge of sclk during data word
           IF(sclk_int = '0' AND ws_cnt > 1 AND ws_cnt < datawidth*2+2) THEN  
@@ -133,6 +140,13 @@ BEGIN
           l_data_rx <= l_data_rx_int;                                     --output left channel received data
           r_data_tx_int <= r_data_tx;                                     --latch in right channel data to transmit
           l_data_tx_int <= l_data_tx;                                     --latch in left channel data to transmit
+          
+          -- ws: '1' is right, '0' is left
+          if (ws_int = '0') then --if ws_int is CURRENTLY left, about to turn RIGHT
+            LR_indicator <= "01";
+          else                   --if ws_int is CURRENTLY right, about to turn LEFT
+            LR_indicator <= "10";
+          end if;
           
         END IF;
         

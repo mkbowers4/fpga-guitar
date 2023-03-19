@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../ip/theBlockDesign/ipshared/62b6" \
+"../../../../fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_xlconstant_0_0/sim/theBlockDesign_xlconstant_0_0.v" \
+"../../../../fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_clk_wiz_0_0/theBlockDesign_clk_wiz_0_0_clk_wiz.v" \
+"../../../../fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_clk_wiz_0_0/theBlockDesign_clk_wiz_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

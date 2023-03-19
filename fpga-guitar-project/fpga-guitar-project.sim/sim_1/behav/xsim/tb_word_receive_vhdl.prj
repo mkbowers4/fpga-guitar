@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_i2s_transceiver_0_0/sim/theBlockDesign_i2s_transceiver_0_0.vhd" \
+"../../../../../rtl/i2s_transceiver.vhd" \
+"../../../../../rtl/rotary_encoder.vhd" \
+"../../../../../rtl/word_receive.vhd" \
+"../../../../fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_rotary_encoder_0_0/sim/theBlockDesign_rotary_encoder_0_0.vhd" \
+"../../../../fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_word_receive_0_0/sim/theBlockDesign_word_receive_0_0.vhd" \
+"../../../../fpga-guitar-project.ip_user_files/bd/theBlockDesign/sim/theBlockDesign.vhd" \
+"../../../../../ip/theBlockDesign/hdl/theBlockDesign_wrapper.vhd" \
+"../../../../../rtl/i2s_top.vhd" \
+"../../../../../rtl/tb_word_receive.vhd" \
+
+# Do not sort compile order
+nosort

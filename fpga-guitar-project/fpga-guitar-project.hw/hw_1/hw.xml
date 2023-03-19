@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2021.2 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xc7s25_0" gui_info="dashboard1=hw_ila_1[xc7s25_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7s25_0/hw_ila_1/Status=ILA_STATUS_1;xc7s25_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7s25_0/hw_ila_1/Settings=ILA_SETTINGS_1;],dashboard2=hw_ila_2[xc7s25_0/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7s25_0/hw_ila_2/Status=ILA_STATUS_1;xc7s25_0/hw_ila_2/Settings=ILA_SETTINGS_1;xc7s25_0/hw_ila_2/Waveform=ILA_WAVE_1;xc7s25_0/hw_ila_2/Capture Setup=ILA_CAPTURE_1;]"/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7s25_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/theBlockDesign_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/theBlockDesign_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/theBlockDesign_wrapper.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_MODE" value="BASIC_ONLY"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="0"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_1" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[23:0]" gui_info="Trigger Setup=0"/>
+    <Object name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[22:0]" gui_info="Trigger Setup=0"/>
+    <Object name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[23:0]" gui_info="Trigger Setup=2"/>
+    <Object name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[22:0]" gui_info="Trigger Setup=3"/>
+    <Object name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int_reg_n_0_[23:23]" gui_info="Trigger Setup=4"/>
+    <Object name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[31:0]" gui_info="Trigger Setup=0"/>
+    <Object name="theBlockDesign_i/i2s_transceiver_0/U0/ws_int_reg_0" gui_info="Trigger Setup=5"/>
+    <Object name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[23:0]" gui_info="Trigger Setup=0"/>
+    <Object name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[23:0]" gui_info="Trigger Setup=1"/>
+    <Object name="ws0_OBUF" gui_info="Trigger Setup=0"/>
+  </ObjectList>
+  <ObjectList object_type="hw_sysmon" gui_info="">
+    <Object name="XADC" gui_info="hw_ila_1=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[23:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[23]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[22]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[21]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[20]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[19]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[18]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[17]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[16]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[15]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[14]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[13]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[12]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[11]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[10]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[9]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[8]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[7]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[6]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[5]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[4]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[3]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[2]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[1]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_rx_int[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq23&apos;hXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq23&apos;hXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[22:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq23&apos;hXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[22]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[21]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[20]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[19]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[18]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[17]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[16]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[15]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[14]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[13]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[12]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[11]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[10]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[9]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[8]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[7]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[6]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[5]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[4]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[3]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[2]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[1]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/l_data_tx_int[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[23:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[23]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[22]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[21]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[20]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[19]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[18]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[17]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[16]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[15]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[14]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[13]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[12]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[11]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[10]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[9]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[8]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[7]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[6]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[5]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[4]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[3]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[2]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[1]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_rx_int[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq23&apos;hXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq23&apos;hXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[22:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq23&apos;hXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[22]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[21]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[20]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[19]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[18]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[17]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[16]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[15]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[14]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[13]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[12]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[11]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[10]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[9]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[8]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[7]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[6]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[5]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[4]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[3]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[2]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[1]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/r_data_tx_int_reg_n_0_[23]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq30&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq30&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:2]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq30&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[31]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[30]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[29]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[28]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[27]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[26]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[25]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[24]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[23]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[22]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[21]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[20]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[19]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[18]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[17]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[16]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[15]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[14]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[13]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[12]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[11]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[10]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[9]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[8]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[7]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[6]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[5]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[4]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[3]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[2]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;h0000_0004"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;h0000_0004"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[31]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[30]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[29]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[28]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[27]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[26]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[25]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[24]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[23]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[22]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[21]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[20]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[19]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[18]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[17]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[16]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[15]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[14]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[13]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[12]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[11]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[10]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[9]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[8]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[7]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[6]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[5]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[4]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[3]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[2]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[1]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_cnt_reg_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b0"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b0"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0/U0/ws_int_reg_0"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq24&apos;bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[23:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq24&apos;bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[23]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[22]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[21]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[20]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[19]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[18]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[17]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[16]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[15]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[14]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[13]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[12]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[11]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[10]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[9]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[8]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[7]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[6]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[5]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[4]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[3]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[2]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[1]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_l_data_rx[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq24&apos;bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[23:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq24&apos;bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[23]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[22]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[21]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[20]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[19]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[18]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[17]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[16]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[15]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[14]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[13]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[12]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[11]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[10]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[9]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[8]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[7]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[6]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[5]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[4]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[3]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[2]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[1]"/>
+        <net name="theBlockDesign_i/i2s_transceiver_0_r_data_rx[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[1]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_1_ws_cnt_reg[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="ws0_OBUF"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mike/repos/fpga-guitar/rtl/word_receive.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'word_receive'

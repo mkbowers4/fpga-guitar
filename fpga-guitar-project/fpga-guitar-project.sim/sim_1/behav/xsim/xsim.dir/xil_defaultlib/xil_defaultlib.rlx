@@ -1,0 +1,18 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_clk_wiz_0_0/theBlockDesign_clk_wiz_0_0.v,1675623277,verilog,,,,theBlockDesign_clk_wiz_0_0,,,../../../../../ip/theBlockDesign/ipshared/62b6,,,,,
+/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_clk_wiz_0_0/theBlockDesign_clk_wiz_0_0_clk_wiz.v,1675623277,verilog,,/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_clk_wiz_0_0/theBlockDesign_clk_wiz_0_0.v,,theBlockDesign_clk_wiz_0_0_clk_wiz,,,../../../../../ip/theBlockDesign/ipshared/62b6,,,,,
+/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_i2s_transceiver_0_0/sim/theBlockDesign_i2s_transceiver_0_0.vhd,1675400069,vhdl,,,,theblockdesign_i2s_transceiver_0_0,,,,,,,,
+/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_rotary_encoder_0_0/sim/theBlockDesign_rotary_encoder_0_0.vhd,1675623277,vhdl,,,,theblockdesign_rotary_encoder_0_0,,,,,,,,
+/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_word_receive_0_0/sim/theBlockDesign_word_receive_0_0.vhd,1675623277,vhdl,,,,theblockdesign_word_receive_0_0,,,,,,,,
+/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_xlconstant_0_0/sim/theBlockDesign_xlconstant_0_0.v,1675129655,verilog,,/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/ip/theBlockDesign_clk_wiz_0_0/theBlockDesign_clk_wiz_0_0_clk_wiz.v,,theBlockDesign_xlconstant_0_0,,,../../../../../ip/theBlockDesign/ipshared/62b6,,,,,
+/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.ip_user_files/bd/theBlockDesign/sim/theBlockDesign.vhd,1675623276,vhdl,,,,theblockdesign,,,,,,,,
+/home/mike/repos/fpga-guitar/fpga-guitar-project/fpga-guitar-project.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
+/home/mike/repos/fpga-guitar/ip/theBlockDesign/hdl/theBlockDesign_wrapper.vhd,1675623276,vhdl,,,,theblockdesign_wrapper,,,,,,,,
+/home/mike/repos/fpga-guitar/rtl/i2s_top.vhd,1674110235,vhdl,,,,i2s_top,,,,,,,,
+/home/mike/repos/fpga-guitar/rtl/i2s_transceiver.vhd,1675315528,vhdl,,,,i2s_transceiver,,,,,,,,
+/home/mike/repos/fpga-guitar/rtl/rotary_encoder.vhd,1675566906,vhdl,,,,rotary_encoder,,,,,,,,
+/home/mike/repos/fpga-guitar/rtl/tb_word_receive.vhd,1675624613,vhdl,,,,tb_word_receive,,,,,,,,
+/home/mike/repos/fpga-guitar/rtl/word_receive.vhd,1675626170,vhdl,,,,word_receive,,,,,,,,

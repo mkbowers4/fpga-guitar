@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Feb  5 15:39:58 2023" VIVADOVERSION="2021.2">
+
+  <SYSTEMINFO ARCH="spartan7" DEVICE="7s25" NAME="theBlockDesign" PACKAGE="csga225" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="12000000" DIR="I" NAME="clock" SIGIS="clk" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rotary_encoder_0" PORT="clk"/>
+        <CONNECTION INSTANCE="External_Ports" PORT="mclk0"/>
+        <CONNECTION INSTANCE="External_Ports" PORT="mclk1"/>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="mclk"/>
+        <CONNECTION INSTANCE="word_receive_0" PORT="mclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mclk0" SIGIS="undef" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mclk1" SIGIS="undef" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sclk0" SIGIS="undef" SIGNAME="i2s_transceiver_0_sclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sclk1" SIGIS="undef" SIGNAME="i2s_transceiver_0_sclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sd_rx" SIGIS="undef" SIGNAME="External_Ports_sd_rx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sd_rx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sd_tx" SIGIS="undef" SIGNAME="i2s_transceiver_0_sd_tx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sd_tx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ws0" SIGIS="undef" SIGNAME="i2s_transceiver_0_ws">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="ws"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ws1" SIGIS="undef" SIGNAME="i2s_transceiver_0_ws">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="ws"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sw" SIGIS="undef" SIGNAME="External_Ports_sw">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rotary_encoder_0" PORT="sw"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="External_Ports_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rotary_encoder_0" PORT="A_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="External_Ports_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rotary_encoder_0" PORT="B_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="LED" RIGHT="0" SIGIS="undef" SIGNAME="rotary_encoder_0_LED">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rotary_encoder_0" PORT="LED"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/i2s_transceiver_0" HWVERSION="1.0" INSTANCE="i2s_transceiver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2s_transceiver" VLNV="xilinx.com:module_ref:i2s_transceiver:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="mclk_sclk_ratio" VALUE="4"/>
+        <PARAMETER NAME="sclk_ws_ratio" VALUE="64"/>
+        <PARAMETER NAME="datawidth" VALUE="24"/>
+        <PARAMETER NAME="Component_Name" VALUE="theBlockDesign_i2s_transceiver_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="resetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mclk" SIGIS="undef" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sclk" SIGIS="undef" SIGNAME="i2s_transceiver_0_sclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sclk0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="sclk1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ws" SIGIS="undef" SIGNAME="i2s_transceiver_0_ws">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ws0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ws1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sd_tx" SIGIS="undef" SIGNAME="i2s_transceiver_0_sd_tx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_tx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sd_rx" SIGIS="undef" SIGNAME="External_Ports_sd_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_rx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="l_data_tx" RIGHT="0" SIGIS="undef" SIGNAME="word_receive_0_word_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="word_receive_0" PORT="word_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="r_data_tx" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="l_data_rx" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_l_data_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="word_receive_0" PORT="l_data_tx_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="r_data_rx" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_r_data_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="word_receive_0" PORT="r_data_tx_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="lr_indicator" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_lr_indicator">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="word_receive_0" PORT="LR_indicator"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/rotary_encoder_0" HWVERSION="1.0" INSTANCE="rotary_encoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rotary_encoder" VLNV="xilinx.com:module_ref:rotary_encoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DEBVAL" VALUE="120000"/>
+        <PARAMETER NAME="TRANSVAL" VALUE="780000"/>
+        <PARAMETER NAME="MAXGAIN" VALUE="12"/>
+        <PARAMETER NAME="Component_Name" VALUE="theBlockDesign_rotary_encoder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="12000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sw" SIGIS="undef" SIGNAME="External_Ports_sw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="A_in" SIGIS="undef" SIGNAME="External_Ports_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="B_in" SIGIS="undef" SIGNAME="External_Ports_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="LED" RIGHT="0" SIGIS="undef" SIGNAME="rotary_encoder_0_LED">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="GAIN_FACTOR" RIGHT="0" SIGIS="undef" SIGNAME="rotary_encoder_0_GAIN_FACTOR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="word_receive_0" PORT="gain_factor"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/word_receive_0" HWVERSION="1.0" INSTANCE="word_receive_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="word_receive" VLNV="xilinx.com:module_ref:word_receive:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="datawidth" VALUE="24"/>
+        <PARAMETER NAME="Component_Name" VALUE="theBlockDesign_word_receive_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="mclk" SIGIS="undef" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="l_data_tx_in" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_l_data_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="l_data_rx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="r_data_tx_in" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_r_data_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="r_data_rx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="LR_indicator" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_lr_indicator">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="lr_indicator"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="gain_factor" RIGHT="0" SIGIS="undef" SIGNAME="rotary_encoder_0_GAIN_FACTOR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rotary_encoder_0" PORT="GAIN_FACTOR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="word_out" RIGHT="0" SIGIS="undef" SIGNAME="word_receive_0_word_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="l_data_tx"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
+        <PARAMETER NAME="Component_Name" VALUE="theBlockDesign_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="resetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_1" HWVERSION="1.1" INSTANCE="xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="theBlockDesign_xlconstant_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="23" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="r_data_tx"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

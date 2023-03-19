@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_word_receive_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_word_receive" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="12.540001 us"></ZoomEndTime>
+      <Cursor1Time time="2.260000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject type="logic" fp_name="/tb_word_receive/mclk">
+      <obj_property name="ElementShortName">mclk</obj_property>
+      <obj_property name="ObjectShortName">mclk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/l_data_tx_in">
+      <obj_property name="ElementShortName">l_data_tx_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">l_data_tx_in[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/r_data_tx_in">
+      <obj_property name="ElementShortName">r_data_tx_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">r_data_tx_in[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/LR_indicator">
+      <obj_property name="ElementShortName">LR_indicator[1:0]</obj_property>
+      <obj_property name="ObjectShortName">LR_indicator[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/gain_factor">
+      <obj_property name="ElementShortName">gain_factor[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gain_factor[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/word_out">
+      <obj_property name="ElementShortName">word_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">word_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_word_receive/datawidth">
+      <obj_property name="ElementShortName">datawidth</obj_property>
+      <obj_property name="ObjectShortName">datawidth</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/word_out">
+      <obj_property name="ElementShortName">word_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">word_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/coeff">
+      <obj_property name="ElementShortName">coeff[4:0][23:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff[4:0][23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/word_in">
+      <obj_property name="ElementShortName">word_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">word_in[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/last_word">
+      <obj_property name="ElementShortName">last_word[23:0]</obj_property>
+      <obj_property name="ObjectShortName">last_word[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/left_reg">
+      <obj_property name="ElementShortName">left_reg[6:0]</obj_property>
+      <obj_property name="ObjectShortName">left_reg[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/en_reg">
+      <obj_property name="ElementShortName">en_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">en_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/right_reg">
+      <obj_property name="ElementShortName">right_reg[6:0]</obj_property>
+      <obj_property name="ObjectShortName">right_reg[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/gainval">
+      <obj_property name="ElementShortName">gainval[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gainval[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_word_receive/UUT/sum">
+      <obj_property name="ElementShortName">sum[23:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_word_receive/UUT/i">
+      <obj_property name="ElementShortName">i</obj_property>
+      <obj_property name="ObjectShortName">i</obj_property>
+   </wvobject>
+</wave_config>

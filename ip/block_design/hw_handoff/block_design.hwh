@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 20 01:32:50 2023" VIVADOVERSION="2021.2">
+
+  <SYSTEMINFO ARCH="spartan7" DEVICE="7s25" NAME="block_design" PACKAGE="csga225" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="12000000" DIR="I" NAME="clock" SIGIS="clk" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="mclk"/>
+        <CONNECTION INSTANCE="External_Ports" PORT="mclk0"/>
+        <CONNECTION INSTANCE="External_Ports" PORT="mclk1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sd_rx" SIGIS="undef" SIGNAME="External_Ports_sd_rx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sd_rx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sd_tx" SIGIS="undef" SIGNAME="i2s_transceiver_0_sd_tx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sd_tx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="resetn" SIGIS="undef" SIGNAME="External_Ports_resetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="resetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mclk1" SIGIS="undef" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="mclk0" SIGIS="undef" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sclk0" SIGIS="undef" SIGNAME="i2s_transceiver_0_sclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sclk1" SIGIS="undef" SIGNAME="i2s_transceiver_0_sclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ws0" SIGIS="undef" SIGNAME="i2s_transceiver_0_ws">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="ws"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ws1" SIGIS="undef" SIGNAME="i2s_transceiver_0_ws">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="ws"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/i2s_transceiver_0" HWVERSION="1.0" INSTANCE="i2s_transceiver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2s_transceiver" VLNV="xilinx.com:module_ref:i2s_transceiver:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="mclk_sclk_ratio" VALUE="4"/>
+        <PARAMETER NAME="sclk_ws_ratio" VALUE="64"/>
+        <PARAMETER NAME="datawidth" VALUE="24"/>
+        <PARAMETER NAME="Component_Name" VALUE="block_design_i2s_transceiver_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="resetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_resetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="resetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mclk" SIGIS="undef" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sclk" SIGIS="undef" SIGNAME="i2s_transceiver_0_sclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sclk0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="sclk1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ws" SIGIS="undef" SIGNAME="i2s_transceiver_0_ws">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ws0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ws1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sd_tx" SIGIS="undef" SIGNAME="i2s_transceiver_0_sd_tx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_tx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sd_rx" SIGIS="undef" SIGNAME="External_Ports_sd_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sd_rx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="l_data_tx" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_l_data_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="l_data_rx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="r_data_tx" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_r_data_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="r_data_rx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="l_data_rx" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_l_data_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="l_data_tx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="r_data_rx" RIGHT="0" SIGIS="undef" SIGNAME="i2s_transceiver_0_r_data_rx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="r_data_tx"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
